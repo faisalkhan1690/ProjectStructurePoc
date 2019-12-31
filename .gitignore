@@ -16,6 +16,7 @@ android/local.properties
 
 # iOS
 ios/Pods
+ios/ProjectStructurePoc.xcworkspace/xcuserdata/
 ios/.DS_Store
 ios/*.pbxuser
 ios/!default.pbxuser
@@ -25,7 +26,6 @@ ios/*.mode2v3
 ios/!default.mode2v3
 ios/*.perspectivev3
 ios/!default.perspectivev3
-ios/xcuserdata
 ios/*.xccheckout
 ios/*.moved-aside
 ios/DerivedData
