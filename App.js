@@ -11,7 +11,7 @@ import { View, Text } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-import HomeScreen from './src/HomeScreen'
+import HomeScreen from './src/HomeScreenComponent'
 
 class Home extends React.Component {
     render() {
