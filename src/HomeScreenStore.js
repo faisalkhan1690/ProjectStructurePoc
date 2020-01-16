@@ -1,12 +1,14 @@
-import {observable } from 'mobx';
+import {observable, action } from "mobx";
 
 class HomeScreenStore{
-  @observable property = '';
 
-  @action setProperty(newProperty: string) {
-    this.property = newProperty;
+  
+  @observable  
+  text = 1;
+
+  @action
+  updateText = () => {
+    this.text = this.text+1;
   }
 }
-
-const homeScreenStore = new HomeScreenStore();
-export default homeScreenStore;
+export default new HomeScreenStore();

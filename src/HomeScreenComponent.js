@@ -15,20 +15,16 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-// import { inject, observer } from 'mobx-react/native';
+import { inject, observer } from "mobx-react";
 
-// @inject('HomeScreenStore')
-// @observer
+@inject('HomeScreenStore')
+@observer
 class HomeScreenComponent extends React.Component {
 
   constructor(props){
     super(props)
-    this.state={
-      countValue:0
-    }
   }
   
-
   render() {
     return (
         <SafeAreaView style={{flex:1}}>
@@ -40,14 +36,14 @@ class HomeScreenComponent extends React.Component {
             </TouchableOpacity>
             
 
-            <Text>This is the value={this.state.countValue}</Text>
+            <Text>This is the value={this.props.HomeScreenStore.text}</Text>
             </View>
         </SafeAreaView>
     );
   }
 
   getNewValue(){
-    this.setState({countValue:this.state.countValue+1});
+    this.props.HomeScreenStore.updateText();
   }
 };
 
